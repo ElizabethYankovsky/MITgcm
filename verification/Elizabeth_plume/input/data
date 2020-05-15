@@ -1,0 +1,92 @@
+# ====================
+# | Model parameters |
+# ====================
+#
+# Continuous equation parameters
+ &PARM01
+ tRefFile='Tref.init',
+ sRefFile='Sref.init',
+ viscA4=0.E4,
+ viscAh=2.5,
+ viscAz=1.E-2,
+ bottomDragLinear=0.E-4,
+ no_slip_sides=.TRUE.,
+ no_slip_bottom=.TRUE.,
+ diffK4T=0.E4,
+ diffKhT=0.E-2,
+ diffKzT=0.E-3,
+ diffK4S=0.E4,
+ diffKhS=0.E-2,
+ diffKzS=0.E-5,
+ f0=1.43e-4,
+ beta=0.E-11,
+ eosType='MDJWF',
+# tAlpha=2.E-4,
+# sBeta =7.4E-4,
+ rigidLid=.FALSE.,
+ implicitFreeSurface=.TRUE.,
+ hFacMin=0.05,
+ nonHydrostatic=.TRUE.,
+ readBinaryPrec=64,
+#- not safe to use globalFiles in multi-processors runs
+#globalFiles=.TRUE.,
+ tempAdvScheme=33,
+ saltAdvScheme=33,
+ staggerTimeStep=.TRUE.,
+ &
+
+# Elliptic solver parameters
+ &PARM02
+ cg2dMaxIters=300,
+ cg2dTargetResidual=1.E-13,
+ cg3dMaxIters=20,
+ cg3dTargetResidual=1.E-8,
+ &
+
+# Time stepping parameters
+ &PARM03
+ nIter0=0,
+ nTimeSteps=345600,
+#nTimeSteps=8640,
+ deltaT=20.0,
+ abEps=0.01,
+ pChkptFreq=3456000,
+ chkptFreq=0.0,
+ dumpFreq=21600.0,
+#taveFreq=864000.0,
+ monitorSelect=2,
+ monitorFreq=1.,
+ &
+
+# Gridding parameters
+ &PARM04
+ usingCartesianGrid=.TRUE.,
+ delXfile='dx.bin',
+ dYspacing=20.,
+ delZ=13.1944, 13.1944, 13.1944, 13.1944, 13.1944, 13.1944, 13.1944, 13.1944,
+13.1944, 13.1944, 13.1944, 13.1944, 13.1945, 13.1945, 13.1945, 13.1945,
+13.1945, 13.1945, 13.1945, 13.1945, 13.1945, 13.1945, 13.1945, 13.1945,
+13.1945, 13.1945, 13.1945, 13.1946, 13.1946, 13.1946, 13.1947, 13.1947,
+13.1948, 13.1949, 13.1949, 13.1951, 13.1952, 13.1954, 13.1956, 13.1958,
+13.1961, 13.1965, 13.1969, 13.1975, 13.1982, 13.1990, 13.2000, 13.2012,
+13.2027, 13.2045, 13.2067, 13.2095, 13.2128, 13.2169, 13.2218, 13.2279,
+13.2353, 13.2443, 13.2553, 13.2687, 13.2851, 13.3051, 13.3295, 13.3593,
+13.3955, 13.4397, 13.4934, 13.5588, 13.6383, 13.7348, 13.8519, 13.9935,
+14.1647, 14.3712, 14.6193, 14.9167, 15.2717, 15.6933, 16.1914, 16.7758,
+17.4563, 18.2414, 19.1377, 20.1490, 21.2746, 22.5090, 23.8405, 25.2517,
+26.7194, 28.2167, 29.7139, 31.1817, 32.5928, 33.9243, 35.1587, 36.2843,
+37.2956, 38.1920, 38.9771, 39.6575, 40.2419, 40.7400, 41.1617, 41.5166,
+41.8140, 42.0622, 42.2686, 42.4398, 42.5815, 42.6985, 42.7950, 42.8745,
+42.9399, 42.9936, 43.0378, 43.0741, 43.1038, 43.1282, 43.1482, 43.1646,
+ &
+
+# Input datasets
+ &PARM05
+ bathyFile='topog.slope',
+ hydrogThetaFile='T.init',
+ hydrogSaltFile='S.init',
+ surfQfile='Qnet.forcing',
+ saltFluxFile='SF.forcing',
+#uVelInitFile='U.pickup',
+#pSurfInitFile='Eta.pickup',
+ &
