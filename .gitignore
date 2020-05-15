@@ -115,3 +115,9 @@ core
 
 /verification/*/tr_run.*
 
+mitgcmuv
+topog.slope
+SF.forcing
+Qnet.forcing
+*.bin
+*.init
