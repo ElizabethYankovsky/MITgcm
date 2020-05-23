@@ -85,8 +85,8 @@
  bathyFile='topog.slope',
  hydrogThetaFile='T.init',
  hydrogSaltFile='S.init',
- surfQfile='Qnet.forcing',
- saltFluxFile='SF.forcing',
+# surfQfile='Qnet.forcing',
+# saltFluxFile='SF.forcing',
 #uVelInitFile='U.pickup',
 #pSurfInitFile='Eta.pickup',
  &
