@@ -1,0 +1,19 @@
+#!/bin/csh
+#SBATCH -A gfdl_o
+#SBATCH -J eady
+#SBATCH --clusters=c3
+#SBATCH --nodes=50
+#SBATCH -t 15:00:00
+
+module unload PrgEnv-intel
+module load PrgEnv-pgi
+module load cray-netcdf
+
+cd /lustre/f2/scratch/$USER
+mkdir 3Dplume_weak
+cd 3Dplume_weak
+cp ~Elizabeth.Yankovsky/MITgcm/verification/Elizabeth_plume_tau03/input/* .
+
+srun --verbose --export=ALL --ntasks=1600 --cpus-per-task=1 ./mitgcmuv
+
+

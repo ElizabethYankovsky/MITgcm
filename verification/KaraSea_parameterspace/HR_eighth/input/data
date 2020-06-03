@@ -1,0 +1,78 @@
+# ====================
+# | Model parameters |
+# ====================
+#
+# Continuous equation parameters
+ &PARM01
+ tRefFile='Tref.init',
+ sRefFile='Sref.init',
+ viscA4=0.E4,
+ viscAh=2.5,
+ viscAz=1.0E-2,
+ bottomDragLinear=0.E-4,
+ no_slip_sides=.TRUE.,
+ no_slip_bottom=.TRUE.,
+ diffK4T=0.E4,
+ diffKhT=0.E-2,
+ diffKzT=0.E-3,
+ diffK4S=0.E4,
+ diffKhS=0.E-2,
+ diffKzS=0.E-5,
+ f0=1.43e-4,
+ beta=0.E-11,
+ eosType='MDJWF',
+# tAlpha=2.E-4,
+# sBeta =7.4E-4,
+ rigidLid=.FALSE.,
+ implicitFreeSurface=.TRUE.,
+ hFacMin=0.05,
+ nonHydrostatic=.TRUE.,
+ readBinaryPrec=64,
+#- not safe to use globalFiles in multi-processors runs
+#globalFiles=.TRUE.,
+ tempAdvScheme=33,
+ saltAdvScheme=33,
+ staggerTimeStep=.TRUE.,
+ &
+
+# Elliptic solver parameters
+ &PARM02
+ cg2dMaxIters=300,
+ cg2dTargetResidual=1.E-13,
+ cg3dMaxIters=20,
+ cg3dTargetResidual=1.E-8,
+ &
+
+# Time stepping parameters
+ &PARM03
+ nIter0=864000,
+ nTimeSteps=172800,
+#nTimeSteps=8640,
+ deltaT=10.0,
+ abEps=0.01,
+ pChkptFreq=1728000.0,
+ chkptFreq=0.,
+ dumpFreq=21600.0,
+#taveFreq=864000.0,
+ monitorSelect=2,
+ monitorFreq=10.,
+ &
+
+# Gridding parameters
+ &PARM04
+ usingCartesianGrid=.TRUE.,
+ delXfile='dx.bin',
+ dYspacing=200.,
+ delRfile='dz.bin',
+ &
+
+# Input datasets
+ &PARM05
+ bathyFile='topog.slope',
+ hydrogThetaFile='T.init',
+ hydrogSaltFile='S.init',
+ surfQfile='Qnet.forcing',
+ saltFluxFile='SF.forcing',
+#uVelInitFile='U.pickup',
+#pSurfInitFile='Eta.pickup',
+ &

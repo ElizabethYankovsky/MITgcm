@@ -1,0 +1,30 @@
+# Open-boundaries
+ &OBCS_PARM01
+ OB_Iwest=1*1,
+ OB_Ieast=1*-1,
+ useOBCSprescribe=.TRUE.,
+ useOBCSbalance=.TRUE.,
+ OBWtFile='WT.forcing',
+ OBWsFile='WS.forcing',
+ OBWuFile='WU.forcing',
+ OBCS_balanceFacE = 1., 
+ OBCS_balanceFacW = 0., 
+ OBCS_balanceFacN = 0., 
+ OBCS_balanceFacS = 0.,
+ 
+&
+
+# Orlanski parameters
+ &OBCS_PARM02
+# Cmax=0.45,
+# cVelTimeScale=1000.,
+ &
+
+# Sponge parameters
+ &OBCS_PARM03
+# spongeThickness=15.,
+# Urelaxobcsinner=4320.,
+# Urelaxobcsbound=432.,
+# Vrelaxobcsinner=4320.,
+# Vrelaxobcsbound=432.,
+ &

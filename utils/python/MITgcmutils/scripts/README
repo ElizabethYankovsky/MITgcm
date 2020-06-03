@@ -1,0 +1,4 @@
+Using gluemncbig
+For the grid variable do:
+../../../../../utils/python/MITgcmutils/scripts/gluemncbig -o grid.nc mnc_*/grid*.nc
+(Likewise for ptracers, state, etc)

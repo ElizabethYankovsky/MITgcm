@@ -1,0 +1,28 @@
+# Open-boundaries
+ &OBCS_PARM01
+ OB_Ieast=1*-1,
+# useOrlanskiEast=.TRUE.,
+# OBCS_monitorFreq=400.,
+ useOBCSprescribe=.TRUE.,
+ useOBCSsponge=.TRUE.,
+ useOBCSbalance=.FALSE.,
+ OBEtFile='Tref.init',
+ OBEsFile='Sref.init',
+ OBEuFile='Uref.init',
+ OBEvFile='Vref.init',
+ &
+
+# Orlanski parameters
+ &OBCS_PARM02
+# Cmax=0.45,
+# cVelTimeScale=1000.,
+ &
+
+# Sponge parameters
+ &OBCS_PARM03
+ spongeThickness=60.,
+ Urelaxobcsinner=4320.,
+ Urelaxobcsbound=432.,
+ Vrelaxobcsinner=4320.,
+ Vrelaxobcsbound=432.,
+ &
