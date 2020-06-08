@@ -10,7 +10,7 @@
  viscAh=1.0E-4,
  viscAz=1.0E-4,
 # bottomDragLinear=0.E-4,
- bottomDragQuadratic=0.003,
+ bottomDragQuadratic=0.005,
  no_slip_sides=.FALSE.,
  no_slip_bottom=.FALSE.,
  diffK4T=0.E4,
@@ -65,7 +65,7 @@
  usingCartesianGrid=.TRUE.,
  dXspacing=100.0,
  dYspacing=100.0,
- delZ=250*0.10,
+ delZ=250*0.12,
  &
 
 # Input datasets

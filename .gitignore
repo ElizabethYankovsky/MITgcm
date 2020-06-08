@@ -114,7 +114,7 @@ core
 /verification/tmp_*
 
 /verification/*/tr_run.*
-
+*.forcing
 mitgcmuv
 topog.slope
 SF.forcing
