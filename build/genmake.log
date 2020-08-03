@@ -1,14 +1,14 @@
 Get compiler version using: ftn -V
-/opt/cray/pe/craype/2.5.5/bin/ftn
+/opt/cray/pe/craype/2.6.3/bin/ftn
 
-pgf90 16.5-0 64-bit target on x86-64 Linux -tp haswell 
-The Portland Group - PGI Compilers and Tools
-Copyright (c) 2016, NVIDIA CORPORATION.  All rights reserved.
+pgf90 19.10-0 LLVM 64-bit target on x86-64 Linux -tp haswell-64 
+PGI Compilers and Tools
+Copyright (c) 2019, NVIDIA CORPORATION.  All rights reserved.
 <-- compiler version ----
 
 running: check_fortran_compiler
  ftn -byteswapio -Mnodclchk -tp k8-64 -pc=64 -fastsse -O3 -Mlarge_arrays -c genmake_tcomp.f
- ftn -byteswapio -Mnodclchk -tp k8-64 -pc=64 -fastsse -O3 -Mlarge_arrays -o genmake_tcomp genmake_tcomp.o -lfmpich -lmpich -L/opt/cray/pe/netcdf/4.4.0/PGI/15.3/lib -lnetcdf -lnetcdff
+ ftn -byteswapio -Mnodclchk -tp k8-64 -pc=64 -fastsse -O3 -Mlarge_arrays -o genmake_tcomp genmake_tcomp.o -lfmpich -lmpich -L/opt/cray/pe/netcdf/4.6.3.2/PGI/19.5/lib -lnetcdf -lnetcdff
 
  warning: MPI run command not found ==> skip run-test check
  --> set FC_CHECK= 4 /5
@@ -24,7 +24,7 @@ running: check_HAVE_CLOC()
 cc -c genmake_tc_1.c
 ftn -byteswapio -Mnodclchk -o genmake_tc genmake_tc_2.f genmake_tc_1.o
 genmake_tc_2.f:
-  HELLO WORLD    1590945140.820618     
+  HELLO WORLD    1595395819.891829     
  --> set HAVE_CLOC='t'
 
 running: check_HAVE_SETRLSTK()
@@ -72,11 +72,11 @@ running: check_netcdf_libs()
       IF (iret .NE. NF_NOERR) write(*,*) NF_STRERROR(iret)
       end
 <<<  genmake_tnc.F  ===
-cat genmake_tnc.F |  cpp -traditional -P -DWORDLENGTH=4 -DTARGET_CRAYXT -DNML_EXTENDED_F77 -DALLOW_USE_MPI -DHAVE_SYSTEM -DHAVE_FDATE -DHAVE_ETIME_FCT -DHAVE_CLOC -DHAVE_SETRLSTK -DHAVE_SIGREG -DHAVE_STAT -I/opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include -I/opt/cray/pe/netcdf/4.4.0/PGI/15.3/include
+cat genmake_tnc.F |  cpp -traditional -P -DWORDLENGTH=4 -DTARGET_CRAYXT -DNML_EXTENDED_F77 -DALLOW_USE_MPI -DHAVE_SYSTEM -DHAVE_FDATE -DHAVE_ETIME_FCT -DHAVE_CLOC -DHAVE_SETRLSTK -DHAVE_SIGREG -DHAVE_STAT -I/opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include -I/opt/cray/pe/netcdf/4.6.3.2/PGI/19.5/include
 ftn  -byteswapio -Mnodclchk -tp k8-64 -pc=64 -fastsse -O3 -Mlarge_arrays -c genmake_tnc.f  \ 
-  &&  ftn  -byteswapio -Mnodclchk -tp k8-64 -pc=64 -fastsse -O3 -Mlarge_arrays -o genmake_tnc.o -lfmpich -lmpich -L/opt/cray/pe/netcdf/4.4.0/PGI/15.3/lib -lnetcdf -lnetcdff
-/opt/cray/pe/hdf5/1.8.16/PGI/15.3/lib/libhdf5.a(H5PL.o): In function `H5PL__open':
-/b/ulib/hdf5-support/rpm/BUILD/cray-hdf5-1.8.16-pgi-serial/hdf5-1.8.16/src/./H5PL.c:588: warning: Using 'dlopen' in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+  &&  ftn  -byteswapio -Mnodclchk -tp k8-64 -pc=64 -fastsse -O3 -Mlarge_arrays -o genmake_tnc.o -lfmpich -lmpich -L/opt/cray/pe/netcdf/4.6.3.2/PGI/19.5/lib -lnetcdf -lnetcdff
+/usr/bin/ld: /opt/cray/pe/hdf5/1.10.5.2/pgi/19.5/lib/libhdf5.a(H5PLint.o): in function `H5PL__open':
+/tmp/bavier/BUILD/hdf5-1.10.5/_build_serial/src/../../src/H5PLint.c:326: warning: Using 'dlopen' in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
 check_netcdf: successful
  --> set HAVE_NETCDF='t'
 

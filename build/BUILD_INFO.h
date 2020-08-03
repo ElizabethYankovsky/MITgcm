@@ -1,4 +1,4 @@
 #define THISVER 'checkpoint67q'
 #define THISUSER 'Elizabeth.Yankovsky'
-#define THISDATE 'Sun May 31 13:12:18 EDT 2020'
-#define THISHOST 'gaea12'
+#define THISDATE 'Wed Jul 22 01:30:13 EDT 2020'
+#define THISHOST 'gaea11'

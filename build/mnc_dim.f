@@ -973,10 +973,15 @@ CEH3 ;;; End: ***
       integer nf_lock
       integer nf_share
       integer nf_64bit_offset
+      integer nf_64bit_data
+      integer nf_cdf5
       integer nf_sizehint_default
       integer nf_align_chunk
       integer nf_format_classic
       integer nf_format_64bit
+      integer nf_format_64bit_offset
+      integer nf_format_64bit_data
+      integer nf_format_cdf5
       integer nf_diskless
       integer nf_mmap
 
@@ -989,10 +994,15 @@ CEH3 ;;; End: ***
       parameter (nf_lock = 1024)
       parameter (nf_share = 2048)
       parameter (nf_64bit_offset = 512)
+      parameter (nf_64bit_data = 32)
+      parameter (nf_cdf5 = nf_64bit_data)
       parameter (nf_sizehint_default = 0)
       parameter (nf_align_chunk = -1)
       parameter (nf_format_classic = 1)
       parameter (nf_format_64bit = 2)
+      parameter (nf_format_64bit_offset = nf_format_64bit)
+      parameter (nf_format_64bit_data = 5)
+      parameter (nf_format_cdf5 = nf_format_64bit_data)
       parameter (nf_diskless = 8)
       parameter (nf_mmap = 16)
 
@@ -2270,6 +2280,12 @@ CEH3 ;;; End: ***
       integer nf_inq_var_endian
       external nf_inq_var_endian
 
+      integer nf_def_var_filter
+      external nf_def_var_filter
+
+      integer nf_inq_var_filter
+      external nf_inq_var_filter
+
 !     User defined types.
       integer nf_inq_typeids
       external nf_inq_typeids
@@ -2650,6 +2666,10 @@ CEH3 ;;; End: ***
       parameter (fillong = -2147483647)
       parameter (filfloat = 9.9692099683868690e+36)
       parameter (fildoub = 9.9692099683868690e+36)
+
+!     This is to turn on netCDF internal logging.
+      integer nf_set_log_level
+      external nf_set_log_level
 
 C     !INPUT PARAMETERS:
       integer myThid, dlen, bi,bj
@@ -3325,10 +3345,15 @@ CEH3 ;;; End: ***
       integer nf_lock
       integer nf_share
       integer nf_64bit_offset
+      integer nf_64bit_data
+      integer nf_cdf5
       integer nf_sizehint_default
       integer nf_align_chunk
       integer nf_format_classic
       integer nf_format_64bit
+      integer nf_format_64bit_offset
+      integer nf_format_64bit_data
+      integer nf_format_cdf5
       integer nf_diskless
       integer nf_mmap
 
@@ -3341,10 +3366,15 @@ CEH3 ;;; End: ***
       parameter (nf_lock = 1024)
       parameter (nf_share = 2048)
       parameter (nf_64bit_offset = 512)
+      parameter (nf_64bit_data = 32)
+      parameter (nf_cdf5 = nf_64bit_data)
       parameter (nf_sizehint_default = 0)
       parameter (nf_align_chunk = -1)
       parameter (nf_format_classic = 1)
       parameter (nf_format_64bit = 2)
+      parameter (nf_format_64bit_offset = nf_format_64bit)
+      parameter (nf_format_64bit_data = 5)
+      parameter (nf_format_cdf5 = nf_format_64bit_data)
       parameter (nf_diskless = 8)
       parameter (nf_mmap = 16)
 
@@ -4622,6 +4652,12 @@ CEH3 ;;; End: ***
       integer nf_inq_var_endian
       external nf_inq_var_endian
 
+      integer nf_def_var_filter
+      external nf_def_var_filter
+
+      integer nf_inq_var_filter
+      external nf_inq_var_filter
+
 !     User defined types.
       integer nf_inq_typeids
       external nf_inq_typeids
@@ -5002,6 +5038,10 @@ CEH3 ;;; End: ***
       parameter (fillong = -2147483647)
       parameter (filfloat = 9.9692099683868690e+36)
       parameter (fildoub = 9.9692099683868690e+36)
+
+!     This is to turn on netCDF internal logging.
+      integer nf_set_log_level
+      external nf_set_log_level
 
 C     !INPUT PARAMETERS:
       integer myThid, unlim_sz

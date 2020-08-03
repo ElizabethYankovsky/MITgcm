@@ -19,7 +19,7 @@
  diffK4S=0.E4,
  diffKhS=1.E-6,
  diffKzS=1.E-6,
- f0=9.0e-5,
+ f0=8.0e-5,
  beta=0.E-11,
  eosType='MDJWF',
 # tAlpha=2.E-4,
@@ -46,10 +46,10 @@
 # Time stepping parameters
  &PARM03
  nIter0=0,
- nTimeSteps=172800,
- deltaT=1.0,
+ nTimeSteps=267840,
+ deltaT=1,
  abEps=0.01,
- pChkptFreq=172800,
+ pChkptFreq=267840,
  chkptFreq=0.0,
  dumpFreq=1800.0,
 #taveFreq=864000.0,
@@ -57,7 +57,7 @@
  monitorFreq=1.,
  periodicExternalForcing=.TRUE.,
  externForcingPeriod=1440.,
- externForcingCycle =44640.,
+ externForcingCycle =267840.,
  &
 
 # Gridding parameters
@@ -65,7 +65,7 @@
  usingCartesianGrid=.TRUE.,
  dXspacing=100.0,
  dYspacing=100.0,
- delZ=250*0.12,
+ delZ=250*0.1,
  &
 
 # Input datasets

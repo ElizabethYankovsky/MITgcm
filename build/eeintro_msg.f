@@ -322,7 +322,7 @@ C     Nr  :: No. points in Z for full process domain.
       INTEGER Nr
       PARAMETER (
      &           sNx =  15,
-     &           sNy =  15,
+     &           sNy =  25,
      &           OLx =   3,
      &           OLy =   3,
      &           nSx =   1,
@@ -1499,11 +1499,11 @@ CEOP
       CALL PRINT_MESSAGE( msgBuf, standardMessageUnit,
      &     SQUEEZE_RIGHT , 1)
       WRITE(msgBuf,'(2A)') '// Build host:        ',
-     &     'gaea12'
+     &     'gaea11'
       CALL PRINT_MESSAGE( msgBuf, standardMessageUnit,
      &     SQUEEZE_RIGHT , 1)
       WRITE(msgBuf,'(2A)') '// Build date:        ',
-     &     'Sun May 31 13:12:18 EDT 2020'
+     &     'Wed Jul 22 01:30:13 EDT 2020'
       CALL PRINT_MESSAGE( msgBuf, standardMessageUnit,
      &     SQUEEZE_RIGHT , 1)
 

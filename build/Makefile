@@ -1,11 +1,11 @@
 # Multithreaded + multi-processing makefile for:
-#    Linux gaea12 4.4.143-94.47.1.16060.2.PTF.1107299-default #1 SMP Tue Sep 11 06:36:34 UTC 2018 (4b33812) x86_64 x86_64 x86_64 GNU/Linux
+#    Linux gaea11 4.12.14-197.40-default #1 SMP Fri Apr 17 12:23:07 UTC 2020 (b27cbb3) x86_64 x86_64 x86_64 GNU/Linux
 # This makefile was generated automatically on
-#    Sun May 31 13:12:18 EDT 2020
+#    Wed Jul 22 01:30:13 EDT 2020
 # by the command:
 #    ../tools/genmake2 -mpi -of ../tools/build_options/gaea_c3 -mods=../verification/Elizabeth_plume/code
 # executed by:
-#    Elizabeth.Yankovsky@gaea12:/ncrc/home1/Elizabeth.Yankovsky/MITgcm/build
+#    Elizabeth.Yankovsky@gaea11:/ncrc/home1/Elizabeth.Yankovsky/MITgcm/build
 #
 # OPTFILE="../tools/build_options/gaea_c3"
 #
@@ -64,9 +64,9 @@ LINK = ftn
 # Defines for CPP
 DEFINES = -DWORDLENGTH=4 -DTARGET_CRAYXT -DNML_EXTENDED_F77 -DALLOW_USE_MPI -DHAVE_SYSTEM -DHAVE_FDATE -DHAVE_ETIME_FCT -DHAVE_CLOC -DHAVE_SETRLSTK -DHAVE_SIGREG -DHAVE_STAT -DHAVE_NETCDF -DHAVE_FLUSH 
 # Includes for CPP
-INCLUDES = -I/opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include -I/opt/cray/pe/netcdf/4.4.0/PGI/15.3/include
+INCLUDES = -I/opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include -I/opt/cray/pe/netcdf/4.6.3.2/PGI/19.5/include
 # default CPP includes for makedepend
-CPPINCLUDES =  -I/ncrc/sw/gaea/.swci/0-login/opt/spack/20180512/linux-sles12-x86_64/gcc-5.3.0/globus-toolkit-6.0.1470089956-qv5wx7v3w36fwejvwzfpxtr77idcs6tu/include -I/usr/lib64/gcc/x86_64-suse-linux/4.8/include -I/usr/local/include -I/usr/lib64/gcc/x86_64-suse-linux/4.8/include-fixed -I/usr/lib64/gcc/x86_64-suse-linux/4.8/../../../../x86_64-suse-linux/include -I/usr/include
+CPPINCLUDES =  -I/sw/gaea-cle7/uasw/ncrc/envs/20200417/opt/linux-sles15-x86_64/gcc-7.5.0/globus-toolkit-6.0.17-klqyvmmhxqsf77ita7vvlw3wgyire7df/include -I/usr/lib64/gcc/x86_64-suse-linux/7/include -I/usr/local/include -I/usr/lib64/gcc/x86_64-suse-linux/7/include-fixed -I/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -I/usr/include
 # Flags for KPP
 KFLAGS1 = 
 KFLAGS2 = 
@@ -83,7 +83,7 @@ CFLAGS =
 NOOPTFILES = 
 NOOPTFLAGS = 
 # Flags and libraries needed for linking
-LIBS = -lfmpich -lmpich -L/opt/cray/pe/netcdf/4.4.0/PGI/15.3/lib -lnetcdf -lnetcdff
+LIBS = -lfmpich -lmpich -L/opt/cray/pe/netcdf/4.6.3.2/PGI/19.5/lib -lnetcdf -lnetcdff
 # Name of the makefile
 MAKEFILE = Makefile
 # Name of the make program
@@ -1415,8 +1415,8 @@ BUILD_INFO.h:
 	@echo Creating $@ ...
 	-echo "#define THISVER 'checkpoint67q'" > $@
 	-echo "#define THISUSER 'Elizabeth.Yankovsky'" >> $@
-	-echo "#define THISDATE 'Sun May 31 13:12:18 EDT 2020'" >> $@
-	-echo "#define THISHOST 'gaea12'" >> $@
+	-echo "#define THISDATE 'Wed Jul 22 01:30:13 EDT 2020'" >> $@
+	-echo "#define THISHOST 'gaea11'" >> $@
 
 # The normal chain of rules is (  .F - .f - .o  )
 
@@ -1961,7 +1961,7 @@ add_walls2masks.f: RECIP_HFACS_MACROS.h RECIP_HFACW_MACROS.h SIZE.h
 add_walls2masks.f: TANPHIATU_MACROS.h TANPHIATV_MACROS.h
 add_walls2masks.f: /usr/include/stdc-predef.h XC_MACROS.h YC_MACROS.h
 all_proc_die.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-all_proc_die.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+all_proc_die.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 all_proc_die.f: SIZE.h /usr/include/stdc-predef.h
 apply_forcing.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h DXC_MACROS.h
 apply_forcing.f: DXF_MACROS.h DXG_MACROS.h DXV_MACROS.h DYC_MACROS.h
@@ -1977,12 +1977,12 @@ apply_forcing.f: RECIP_HFACW_MACROS.h SIZE.h SURFACE.h TANPHIATU_MACROS.h
 apply_forcing.f: TANPHIATV_MACROS.h /usr/include/stdc-predef.h XC_MACROS.h
 apply_forcing.f: YC_MACROS.h
 bar2.f: BAR2.h CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-bar2.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h SIZE.h
+bar2.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h SIZE.h
 bar2.f: /usr/include/stdc-predef.h
 bar_check.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h SIZE.h
 bar_check.f: /usr/include/stdc-predef.h
 barrier.f: BARRIER.h CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-barrier.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h SIZE.h
+barrier.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h SIZE.h
 barrier.f: /usr/include/stdc-predef.h
 calc_3d_diffusivity.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h
 calc_3d_diffusivity.f: DXC_MACROS.h DXF_MACROS.h DXG_MACROS.h DXV_MACROS.h
@@ -2220,12 +2220,12 @@ cg3d.f: XC_MACROS.h YC_MACROS.h
 check_pickup.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h EEPARAMS.h
 check_pickup.f: PARAMS.h RESTART.h SIZE.h /usr/include/stdc-predef.h
 check_threads.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-check_threads.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+check_threads.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 check_threads.f: SIZE.h /usr/include/stdc-predef.h
 chksum_tiled.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h DEBUG_OPTIONS.h
 chksum_tiled.f: EEPARAMS.h PACKAGES_CONFIG.h SIZE.h /usr/include/stdc-predef.h
 comm_stats.f: BAR2.h CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-comm_stats.f: EXCH.h /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+comm_stats.f: EXCH.h /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 comm_stats.f: SIZE.h /usr/include/stdc-predef.h
 config_check.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h EEPARAMS.h
 config_check.f: MOM_COMMON_OPTIONS.h PACKAGES_CONFIG.h PARAMS.h SIZE.h
@@ -2306,7 +2306,7 @@ correction_step.f: TANPHIATU_MACROS.h TANPHIATV_MACROS.h
 correction_step.f: /usr/include/stdc-predef.h XC_MACROS.h YC_MACROS.h
 cumulsum_z_tile.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CUMULSUM.h EEPARAMS.h
 cumulsum_z_tile.f: EESUPPORT.h
-cumulsum_z_tile.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+cumulsum_z_tile.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 cumulsum_z_tile.f: PACKAGES_CONFIG.h SIZE.h /usr/include/stdc-predef.h
 cycle_ab_tracer.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h EEPARAMS.h
 cycle_ab_tracer.f: PARAMS.h SIZE.h /usr/include/stdc-predef.h
@@ -2450,25 +2450,25 @@ dynamics.f: RECIP_HFACC_MACROS.h RECIP_HFACS_MACROS.h RECIP_HFACW_MACROS.h
 dynamics.f: SIZE.h TANPHIATU_MACROS.h TANPHIATV_MACROS.h
 dynamics.f: /usr/include/stdc-predef.h XC_MACROS.h YC_MACROS.h
 eeboot.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-eeboot.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+eeboot.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 eeboot.f: PACKAGES_CONFIG.h SIZE.h /usr/include/stdc-predef.h
 eeboot_minimal.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-eeboot_minimal.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+eeboot_minimal.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 eeboot_minimal.f: PACKAGES_CONFIG.h SIZE.h /usr/include/stdc-predef.h
 eedata_example.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h SIZE.h
 eedata_example.f: /usr/include/stdc-predef.h
 eedie.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-eedie.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h SIZE.h
+eedie.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h SIZE.h
 eedie.f: /usr/include/stdc-predef.h
 eeintro_msg.f: BUILD_INFO.h CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h
 eeintro_msg.f: EESUPPORT.h
-eeintro_msg.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h SIZE.h
-eeintro_msg.f: /usr/include/stdc-predef.h
+eeintro_msg.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
+eeintro_msg.f: SIZE.h /usr/include/stdc-predef.h
 eeset_parms.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h EXCH.h
-eeset_parms.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h SIZE.h
-eeset_parms.f: /usr/include/stdc-predef.h
+eeset_parms.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
+eeset_parms.f: SIZE.h /usr/include/stdc-predef.h
 eewrite_eeenv.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-eewrite_eeenv.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+eewrite_eeenv.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 eewrite_eeenv.f: SIZE.h /usr/include/stdc-predef.h
 exch0_r4.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h SIZE.h
 exch0_r4.f: /usr/include/stdc-predef.h
@@ -2535,74 +2535,74 @@ exch_3d_rl.f: SIZE.h /usr/include/stdc-predef.h
 exch_3d_rs.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h PACKAGES_CONFIG.h
 exch_3d_rs.f: SIZE.h /usr/include/stdc-predef.h
 exch_cycle_ebl.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h EXCH.h
-exch_cycle_ebl.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+exch_cycle_ebl.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 exch_cycle_ebl.f: SIZE.h /usr/include/stdc-predef.h
 exch_init.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h EXCH.h
-exch_init.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h SIZE.h
+exch_init.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h SIZE.h
 exch_init.f: /usr/include/stdc-predef.h
 exch_r4_recv_get_x.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
 exch_r4_recv_get_x.f: EXCH.h
-exch_r4_recv_get_x.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+exch_r4_recv_get_x.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 exch_r4_recv_get_x.f: SIZE.h /usr/include/stdc-predef.h
 exch_r4_recv_get_y.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
 exch_r4_recv_get_y.f: EXCH.h
-exch_r4_recv_get_y.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+exch_r4_recv_get_y.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 exch_r4_recv_get_y.f: SIZE.h /usr/include/stdc-predef.h
 exch_r4_send_put_x.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
 exch_r4_send_put_x.f: EXCH.h
-exch_r4_send_put_x.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+exch_r4_send_put_x.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 exch_r4_send_put_x.f: SIZE.h /usr/include/stdc-predef.h
 exch_r4_send_put_y.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
 exch_r4_send_put_y.f: EXCH.h
-exch_r4_send_put_y.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+exch_r4_send_put_y.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 exch_r4_send_put_y.f: SIZE.h /usr/include/stdc-predef.h
 exch_r8_recv_get_x.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
 exch_r8_recv_get_x.f: EXCH.h
-exch_r8_recv_get_x.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+exch_r8_recv_get_x.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 exch_r8_recv_get_x.f: SIZE.h /usr/include/stdc-predef.h
 exch_r8_recv_get_y.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
 exch_r8_recv_get_y.f: EXCH.h
-exch_r8_recv_get_y.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+exch_r8_recv_get_y.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 exch_r8_recv_get_y.f: SIZE.h /usr/include/stdc-predef.h
 exch_r8_send_put_x.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
 exch_r8_send_put_x.f: EXCH.h
-exch_r8_send_put_x.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+exch_r8_send_put_x.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 exch_r8_send_put_x.f: SIZE.h /usr/include/stdc-predef.h
 exch_r8_send_put_y.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
 exch_r8_send_put_y.f: EXCH.h
-exch_r8_send_put_y.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+exch_r8_send_put_y.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 exch_r8_send_put_y.f: SIZE.h /usr/include/stdc-predef.h
 exch_rl_recv_get_x.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
 exch_rl_recv_get_x.f: EXCH.h
-exch_rl_recv_get_x.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+exch_rl_recv_get_x.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 exch_rl_recv_get_x.f: SIZE.h /usr/include/stdc-predef.h
 exch_rl_recv_get_y.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
 exch_rl_recv_get_y.f: EXCH.h
-exch_rl_recv_get_y.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+exch_rl_recv_get_y.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 exch_rl_recv_get_y.f: SIZE.h /usr/include/stdc-predef.h
 exch_rl_send_put_x.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
 exch_rl_send_put_x.f: EXCH.h
-exch_rl_send_put_x.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+exch_rl_send_put_x.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 exch_rl_send_put_x.f: SIZE.h /usr/include/stdc-predef.h
 exch_rl_send_put_y.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
 exch_rl_send_put_y.f: EXCH.h
-exch_rl_send_put_y.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+exch_rl_send_put_y.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 exch_rl_send_put_y.f: SIZE.h /usr/include/stdc-predef.h
 exch_rs_recv_get_x.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
 exch_rs_recv_get_x.f: EXCH.h
-exch_rs_recv_get_x.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+exch_rs_recv_get_x.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 exch_rs_recv_get_x.f: SIZE.h /usr/include/stdc-predef.h
 exch_rs_recv_get_y.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
 exch_rs_recv_get_y.f: EXCH.h
-exch_rs_recv_get_y.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+exch_rs_recv_get_y.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 exch_rs_recv_get_y.f: SIZE.h /usr/include/stdc-predef.h
 exch_rs_send_put_x.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
 exch_rs_send_put_x.f: EXCH.h
-exch_rs_send_put_x.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+exch_rs_send_put_x.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 exch_rs_send_put_x.f: SIZE.h /usr/include/stdc-predef.h
 exch_rs_send_put_y.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
 exch_rs_send_put_y.f: EXCH.h
-exch_rs_send_put_y.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+exch_rs_send_put_y.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 exch_rs_send_put_y.f: SIZE.h /usr/include/stdc-predef.h
 exch_s3d_r4.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h PACKAGES_CONFIG.h
 exch_s3d_r4.f: SIZE.h /usr/include/stdc-predef.h
@@ -3708,30 +3708,30 @@ gad_write_pickup.f: GAD.h GAD_OPTIONS.h GAD_SOM_VARS.h MNC_PARAMS.h
 gad_write_pickup.f: PACKAGES_CONFIG.h PARAMS.h SIZE.h
 gad_write_pickup.f: /usr/include/stdc-predef.h
 gather_2d_r4.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-gather_2d_r4.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+gather_2d_r4.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 gather_2d_r4.f: PACKAGES_CONFIG.h SIZE.h /usr/include/stdc-predef.h
 gather_2d_r8.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-gather_2d_r8.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+gather_2d_r8.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 gather_2d_r8.f: PACKAGES_CONFIG.h SIZE.h /usr/include/stdc-predef.h
 gather_2d_wh_r4.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-gather_2d_wh_r4.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+gather_2d_wh_r4.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 gather_2d_wh_r4.f: PACKAGES_CONFIG.h SIZE.h /usr/include/stdc-predef.h
 gather_2d_wh_r8.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-gather_2d_wh_r8.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+gather_2d_wh_r8.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 gather_2d_wh_r8.f: PACKAGES_CONFIG.h SIZE.h /usr/include/stdc-predef.h
 gather_vec_r4.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-gather_vec_r4.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+gather_vec_r4.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 gather_vec_r4.f: SIZE.h /usr/include/stdc-predef.h
 gather_vec_r8.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-gather_vec_r8.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+gather_vec_r8.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 gather_vec_r8.f: SIZE.h /usr/include/stdc-predef.h
 gather_xz.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h EEPARAMS.h
 gather_xz.f: EESUPPORT.h
-gather_xz.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h SIZE.h
+gather_xz.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h SIZE.h
 gather_xz.f: /usr/include/stdc-predef.h
 gather_yz.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h EEPARAMS.h
 gather_yz.f: EESUPPORT.h
-gather_yz.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h SIZE.h
+gather_yz.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h SIZE.h
 gather_yz.f: /usr/include/stdc-predef.h
 get_periodic_interval.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h
 get_periodic_interval.f: /usr/include/stdc-predef.h
@@ -3739,22 +3739,22 @@ get_write_global_fld.f: CPP_EEMACROS.h CPP_EEOPTIONS.h
 get_write_global_fld.f: /usr/include/stdc-predef.h
 global_max.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
 global_max.f: GLOBAL_MAX.h
-global_max.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h SIZE.h
+global_max.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h SIZE.h
 global_max.f: /usr/include/stdc-predef.h
 global_sum.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
 global_sum.f: GLOBAL_SUM.h
-global_sum.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h SIZE.h
+global_sum.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h SIZE.h
 global_sum.f: /usr/include/stdc-predef.h
 global_sum_singlecpu.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEBUFF_SCPU.h
 global_sum_singlecpu.f: EEPARAMS.h EESUPPORT.h GLOBAL_SUM.h
-global_sum_singlecpu.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+global_sum_singlecpu.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 global_sum_singlecpu.f: PACKAGES_CONFIG.h SIZE.h /usr/include/stdc-predef.h
 global_sum_tile.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
 global_sum_tile.f: GLOBAL_SUM.h
-global_sum_tile.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+global_sum_tile.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 global_sum_tile.f: SIZE.h /usr/include/stdc-predef.h
 global_vec_sum.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-global_vec_sum.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+global_vec_sum.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 global_vec_sum.f: SIZE.h /usr/include/stdc-predef.h
 grad_sigma.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h DXC_MACROS.h
 grad_sigma.f: DXF_MACROS.h DXG_MACROS.h DXV_MACROS.h DYC_MACROS.h DYF_MACROS.h
@@ -3768,7 +3768,7 @@ grad_sigma.f: RECIP_HFACC_MACROS.h RECIP_HFACS_MACROS.h RECIP_HFACW_MACROS.h
 grad_sigma.f: SIZE.h TANPHIATU_MACROS.h TANPHIATV_MACROS.h
 grad_sigma.f: /usr/include/stdc-predef.h XC_MACROS.h YC_MACROS.h
 gsum.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-gsum.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h SIZE.h
+gsum.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h SIZE.h
 gsum.f: /usr/include/stdc-predef.h
 gsw_teos10.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h
 gsw_teos10.f: /usr/include/stdc-predef.h
@@ -3823,7 +3823,7 @@ ini_cg3d.f: TANPHIATU_MACROS.h TANPHIATV_MACROS.h /usr/include/stdc-predef.h
 ini_cg3d.f: XC_MACROS.h YC_MACROS.h
 ini_communication_patterns.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h
 ini_communication_patterns.f: EESUPPORT.h EXCH.h
-ini_communication_patterns.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+ini_communication_patterns.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 ini_communication_patterns.f: PACKAGES_CONFIG.h SIZE.h
 ini_communication_patterns.f: /usr/include/stdc-predef.h
 ini_cori.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h DXC_MACROS.h
@@ -3987,7 +3987,7 @@ ini_mnc_vars.f: SIZE.h TANPHIATU_MACROS.h TANPHIATV_MACROS.h
 ini_mnc_vars.f: /usr/include/stdc-predef.h XC_MACROS.h YC_MACROS.h
 ini_model_io.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h EEBUFF_SCPU.h
 ini_model_io.f: EEPARAMS.h EESUPPORT.h
-ini_model_io.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+ini_model_io.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 ini_model_io.f: PACKAGES_CONFIG.h PARAMS.h RESTART.h SIZE.h
 ini_model_io.f: /usr/include/stdc-predef.h
 ini_nh_fields.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h DXC_MACROS.h
@@ -4054,7 +4054,7 @@ ini_pressure.f: RECIP_HFACC_MACROS.h RECIP_HFACS_MACROS.h RECIP_HFACW_MACROS.h
 ini_pressure.f: SIZE.h TANPHIATU_MACROS.h TANPHIATV_MACROS.h
 ini_pressure.f: /usr/include/stdc-predef.h XC_MACROS.h YC_MACROS.h
 ini_procs.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-ini_procs.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h SIZE.h
+ini_procs.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h SIZE.h
 ini_procs.f: /usr/include/stdc-predef.h
 ini_psurf.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h DXC_MACROS.h
 ini_psurf.f: DXF_MACROS.h DXG_MACROS.h DXV_MACROS.h DYC_MACROS.h DYF_MACROS.h
@@ -4119,7 +4119,7 @@ ini_theta.f: RECIP_HFACW_MACROS.h SIZE.h TANPHIATU_MACROS.h TANPHIATV_MACROS.h
 ini_theta.f: /usr/include/stdc-predef.h XC_MACROS.h YC_MACROS.h
 ini_threading_environment.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h
 ini_threading_environment.f: EESUPPORT.h
-ini_threading_environment.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+ini_threading_environment.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 ini_threading_environment.f: PACKAGES_CONFIG.h SIZE.h
 ini_threading_environment.f: /usr/include/stdc-predef.h
 initialise_fixed.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h EEPARAMS.h
@@ -4215,7 +4215,7 @@ main.f: DXG_MACROS.h DXV_MACROS.h DYC_MACROS.h DYF_MACROS.h DYG_MACROS.h
 main.f: DYNVARS.h DYU_MACROS.h EEPARAMS.h EESUPPORT.h FCORI_MACROS.h FFIELDS.h
 main.f: GRID.h GRID_MACROS.h HFACC_MACROS.h HFACS_MACROS.h HFACW_MACROS.h
 main.f: MAIN_PDIRECTIVES1.h MAIN_PDIRECTIVES2.h MASKS_MACROS.h MASKW_MACROS.h
-main.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+main.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 main.f: PACKAGES_CONFIG.h PARAMS.h RA_MACROS.h RAS_MACROS.h RAW_MACROS.h
 main.f: RECIP_DXC_MACROS.h RECIP_DXF_MACROS.h RECIP_DXG_MACROS.h
 main.f: RECIP_DXV_MACROS.h RECIP_DYC_MACROS.h RECIP_DYF_MACROS.h
@@ -4226,7 +4226,7 @@ main.f: XC_MACROS.h YC_MACROS.h
 master_cpu_io.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h SIZE.h
 master_cpu_io.f: /usr/include/stdc-predef.h
 master_cpu_thread.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-master_cpu_thread.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+master_cpu_thread.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 master_cpu_thread.f: SIZE.h /usr/include/stdc-predef.h
 mds_byteswapi4.f: CPP_EEMACROS.h CPP_EEOPTIONS.h /usr/include/stdc-predef.h
 mds_byteswapr4.f: CPP_EEMACROS.h CPP_EEOPTIONS.h /usr/include/stdc-predef.h
@@ -4344,7 +4344,7 @@ mnc_cw_cvars.f: DYF_MACROS.h DYG_MACROS.h DYU_MACROS.h EEPARAMS.h
 mnc_cw_cvars.f: FCORI_MACROS.h GRID.h GRID_MACROS.h HFACC_MACROS.h
 mnc_cw_cvars.f: HFACS_MACROS.h HFACW_MACROS.h MASKS_MACROS.h MASKW_MACROS.h
 mnc_cw_cvars.f: MNC_COMMON.h MNC_ID_HEADER.h MNC_OPTIONS.h MNC_SIZE.h
-mnc_cw_cvars.f: /opt/cray/pe/netcdf/4.4.0/PGI/15.3/include/netcdf.inc
+mnc_cw_cvars.f: /opt/cray/pe/netcdf/4.6.3.2/PGI/19.5/include/netcdf.inc
 mnc_cw_cvars.f: PACKAGES_CONFIG.h PARAMS.h RA_MACROS.h RAS_MACROS.h
 mnc_cw_cvars.f: RAW_MACROS.h RECIP_DXC_MACROS.h RECIP_DXF_MACROS.h
 mnc_cw_cvars.f: RECIP_DXG_MACROS.h RECIP_DXV_MACROS.h RECIP_DYC_MACROS.h
@@ -4364,24 +4364,24 @@ mnc_cw_model_attr.f: PACKAGES_CONFIG.h PARAMS.h SIZE.h
 mnc_cw_model_attr.f: /usr/include/stdc-predef.h
 mnc_cwrapper.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h EEPARAMS.h
 mnc_cwrapper.f: MNC_COMMON.h MNC_ID_HEADER.h MNC_OPTIONS.h MNC_SIZE.h
-mnc_cwrapper.f: /opt/cray/pe/netcdf/4.4.0/PGI/15.3/include/netcdf.inc
+mnc_cwrapper.f: /opt/cray/pe/netcdf/4.6.3.2/PGI/19.5/include/netcdf.inc
 mnc_cwrapper.f: PACKAGES_CONFIG.h PARAMS.h SIZE.h /usr/include/stdc-predef.h
 MNC_CW_READWRITE_I.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h EEPARAMS.h
 MNC_CW_READWRITE_I.f: MNC_BUFF.h MNC_COMMON.h MNC_ID_HEADER.h MNC_OPTIONS.h
 MNC_CW_READWRITE_I.f: MNC_PARAMS.h MNC_SIZE.h
-MNC_CW_READWRITE_I.f: /opt/cray/pe/netcdf/4.4.0/PGI/15.3/include/netcdf.inc
+MNC_CW_READWRITE_I.f: /opt/cray/pe/netcdf/4.6.3.2/PGI/19.5/include/netcdf.inc
 MNC_CW_READWRITE_I.f: PACKAGES_CONFIG.h PARAMS.h SIZE.h
 MNC_CW_READWRITE_I.f: /usr/include/stdc-predef.h
 MNC_CW_READWRITE_RL.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h EEPARAMS.h
 MNC_CW_READWRITE_RL.f: MNC_BUFF.h MNC_COMMON.h MNC_ID_HEADER.h MNC_OPTIONS.h
 MNC_CW_READWRITE_RL.f: MNC_PARAMS.h MNC_SIZE.h
-MNC_CW_READWRITE_RL.f: /opt/cray/pe/netcdf/4.4.0/PGI/15.3/include/netcdf.inc
+MNC_CW_READWRITE_RL.f: /opt/cray/pe/netcdf/4.6.3.2/PGI/19.5/include/netcdf.inc
 MNC_CW_READWRITE_RL.f: PACKAGES_CONFIG.h PARAMS.h SIZE.h
 MNC_CW_READWRITE_RL.f: /usr/include/stdc-predef.h
 MNC_CW_READWRITE_RS.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h EEPARAMS.h
 MNC_CW_READWRITE_RS.f: MNC_BUFF.h MNC_COMMON.h MNC_ID_HEADER.h MNC_OPTIONS.h
 MNC_CW_READWRITE_RS.f: MNC_PARAMS.h MNC_SIZE.h
-MNC_CW_READWRITE_RS.f: /opt/cray/pe/netcdf/4.4.0/PGI/15.3/include/netcdf.inc
+MNC_CW_READWRITE_RS.f: /opt/cray/pe/netcdf/4.6.3.2/PGI/19.5/include/netcdf.inc
 MNC_CW_READWRITE_RS.f: PACKAGES_CONFIG.h PARAMS.h SIZE.h
 MNC_CW_READWRITE_RS.f: /usr/include/stdc-predef.h
 mnc_cw_udim.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h EEPARAMS.h
@@ -4405,18 +4405,18 @@ mnc_cw_write_grid_info.f: TANPHIATV_MACROS.h /usr/include/stdc-predef.h
 mnc_cw_write_grid_info.f: XC_MACROS.h YC_MACROS.h
 mnc_dim.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h EEPARAMS.h
 mnc_dim.f: MNC_COMMON.h MNC_ID_HEADER.h MNC_OPTIONS.h MNC_SIZE.h
-mnc_dim.f: /opt/cray/pe/netcdf/4.4.0/PGI/15.3/include/netcdf.inc
+mnc_dim.f: /opt/cray/pe/netcdf/4.6.3.2/PGI/19.5/include/netcdf.inc
 mnc_dim.f: PACKAGES_CONFIG.h /usr/include/stdc-predef.h
 mnc_dump.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h MNC_COMMON.h
 mnc_dump.f: MNC_ID_HEADER.h MNC_OPTIONS.h MNC_SIZE.h PACKAGES_CONFIG.h
 mnc_dump.f: /usr/include/stdc-predef.h
 mnc_file.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h EEPARAMS.h
 mnc_file.f: MNC_COMMON.h MNC_ID_HEADER.h MNC_OPTIONS.h MNC_SIZE.h
-mnc_file.f: /opt/cray/pe/netcdf/4.4.0/PGI/15.3/include/netcdf.inc
+mnc_file.f: /opt/cray/pe/netcdf/4.6.3.2/PGI/19.5/include/netcdf.inc
 mnc_file.f: PACKAGES_CONFIG.h /usr/include/stdc-predef.h
 mnc_grid.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h EEPARAMS.h
 mnc_grid.f: MNC_COMMON.h MNC_ID_HEADER.h MNC_OPTIONS.h MNC_SIZE.h
-mnc_grid.f: /opt/cray/pe/netcdf/4.4.0/PGI/15.3/include/netcdf.inc
+mnc_grid.f: /opt/cray/pe/netcdf/4.6.3.2/PGI/19.5/include/netcdf.inc
 mnc_grid.f: PACKAGES_CONFIG.h /usr/include/stdc-predef.h
 mnc_init.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h EEPARAMS.h
 mnc_init.f: MNC_COMMON.h MNC_ID_HEADER.h MNC_OPTIONS.h MNC_PARAMS.h MNC_SIZE.h
@@ -4431,11 +4431,11 @@ mnc_update_time.f: PACKAGES_CONFIG.h PARAMS.h SIZE.h
 mnc_update_time.f: /usr/include/stdc-predef.h
 mnc_utils.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h EEPARAMS.h
 mnc_utils.f: MNC_COMMON.h MNC_ID_HEADER.h MNC_OPTIONS.h MNC_SIZE.h
-mnc_utils.f: /opt/cray/pe/netcdf/4.4.0/PGI/15.3/include/netcdf.inc
+mnc_utils.f: /opt/cray/pe/netcdf/4.6.3.2/PGI/19.5/include/netcdf.inc
 mnc_utils.f: PACKAGES_CONFIG.h /usr/include/stdc-predef.h
 mnc_var.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h EEPARAMS.h
 mnc_var.f: MNC_COMMON.h MNC_ID_HEADER.h MNC_OPTIONS.h MNC_SIZE.h
-mnc_var.f: /opt/cray/pe/netcdf/4.4.0/PGI/15.3/include/netcdf.inc
+mnc_var.f: /opt/cray/pe/netcdf/4.6.3.2/PGI/19.5/include/netcdf.inc
 mnc_var.f: PACKAGES_CONFIG.h /usr/include/stdc-predef.h
 mom_calc_3d_strain.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h
 mom_calc_3d_strain.f: DXC_MACROS.h DXF_MACROS.h DXG_MACROS.h DXV_MACROS.h
@@ -5952,7 +5952,7 @@ pressure_for_eos.f: RECIP_HFACS_MACROS.h RECIP_HFACW_MACROS.h SIZE.h
 pressure_for_eos.f: TANPHIATU_MACROS.h TANPHIATV_MACROS.h
 pressure_for_eos.f: /usr/include/stdc-predef.h XC_MACROS.h YC_MACROS.h
 print.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-print.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h SIZE.h
+print.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h SIZE.h
 print.f: /usr/include/stdc-predef.h
 ptracers_ad_dump.f: AD_CONFIG.h CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h
 ptracers_ad_dump.f: EEPARAMS.h PACKAGES_CONFIG.h PARAMS.h PTRACERS_OPTIONS.h
@@ -6327,28 +6327,28 @@ salt_integrate.f: RECIP_HFACW_MACROS.h RESTART.h SIZE.h TANPHIATU_MACROS.h
 salt_integrate.f: TANPHIATV_MACROS.h /usr/include/stdc-predef.h XC_MACROS.h
 salt_integrate.f: YC_MACROS.h
 scatter_2d_r4.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-scatter_2d_r4.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+scatter_2d_r4.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 scatter_2d_r4.f: PACKAGES_CONFIG.h SIZE.h /usr/include/stdc-predef.h
 scatter_2d_r8.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-scatter_2d_r8.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+scatter_2d_r8.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 scatter_2d_r8.f: PACKAGES_CONFIG.h SIZE.h /usr/include/stdc-predef.h
 scatter_2d_wh_r4.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-scatter_2d_wh_r4.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+scatter_2d_wh_r4.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 scatter_2d_wh_r4.f: PACKAGES_CONFIG.h SIZE.h /usr/include/stdc-predef.h
 scatter_2d_wh_r8.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-scatter_2d_wh_r8.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+scatter_2d_wh_r8.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 scatter_2d_wh_r8.f: PACKAGES_CONFIG.h SIZE.h /usr/include/stdc-predef.h
 scatter_vec_r4.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-scatter_vec_r4.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+scatter_vec_r4.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 scatter_vec_r4.f: SIZE.h /usr/include/stdc-predef.h
 scatter_vec_r8.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-scatter_vec_r8.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h
+scatter_vec_r8.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h
 scatter_vec_r8.f: SIZE.h /usr/include/stdc-predef.h
 scatter_xz.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-scatter_xz.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h SIZE.h
+scatter_xz.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h SIZE.h
 scatter_xz.f: /usr/include/stdc-predef.h
 scatter_yz.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-scatter_yz.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h SIZE.h
+scatter_yz.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h SIZE.h
 scatter_yz.f: /usr/include/stdc-predef.h
 seawater.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h
 seawater.f: /usr/include/stdc-predef.h
@@ -6565,7 +6565,7 @@ timeave_surf_flux.f: SURFACE.h TANPHIATU_MACROS.h TANPHIATV_MACROS.h
 timeave_surf_flux.f: TIMEAVE_OPTIONS.h TIMEAVE_STATV.h
 timeave_surf_flux.f: /usr/include/stdc-predef.h XC_MACROS.h YC_MACROS.h
 timers.f: CPP_EEMACROS.h CPP_EEOPTIONS.h EEPARAMS.h EESUPPORT.h
-timers.f: /opt/cray/pe/mpt/7.4.0/gni/mpich-pgi/15.3/include/mpif.h SIZE.h
+timers.f: /opt/cray/pe/mpt/7.7.11/gni/mpich-pgi/19.1/include/mpif.h SIZE.h
 timers.f: /usr/include/stdc-predef.h
 timestep.f: CPP_EEMACROS.h CPP_EEOPTIONS.h CPP_OPTIONS.h DXC_MACROS.h
 timestep.f: DXF_MACROS.h DXG_MACROS.h DXV_MACROS.h DYC_MACROS.h DYF_MACROS.h

@@ -395,7 +395,7 @@ C     Nr  :: No. points in Z for full process domain.
       INTEGER Nr
       PARAMETER (
      &           sNx =  15,
-     &           sNy =  15,
+     &           sNy =  25,
      &           OLx =   3,
      &           OLy =   3,
      &           nSx =   1,
@@ -1865,10 +1865,10 @@ C     Global attributes
      &     'Elizabeth.Yankovsky' ,
      &     myThid )
       CALL MNC_FILE_ADD_ATTR_STR(fname, 'build_host',
-     &     'gaea12' ,
+     &     'gaea11' ,
      &     myThid )
       CALL MNC_FILE_ADD_ATTR_STR(fname, 'build_date',
-     &     'Sun May 31 13:12:18 EDT 2020' ,
+     &     'Wed Jul 22 01:30:13 EDT 2020' ,
      &     myThid )
 
       CALL MNC_FILE_ADD_ATTR_STR(fname, 'MITgcm_URL',

@@ -403,7 +403,7 @@ C     Nr  :: No. points in Z for full process domain.
       INTEGER Nr
       PARAMETER (
      &           sNx =  15,
-     &           sNy =  15,
+     &           sNy =  25,
      &           OLx =   3,
      &           OLy =   3,
      &           nSx =   1,
@@ -3537,7 +3537,7 @@ C     Nr  :: No. points in Z for full process domain.
       INTEGER Nr
       PARAMETER (
      &           sNx =  15,
-     &           sNy =  15,
+     &           sNy =  25,
      &           OLx =   3,
      &           OLy =   3,
      &           nSx =   1,
@@ -6671,7 +6671,7 @@ C     Nr  :: No. points in Z for full process domain.
       INTEGER Nr
       PARAMETER (
      &           sNx =  15,
-     &           sNy =  15,
+     &           sNy =  25,
      &           OLx =   3,
      &           OLy =   3,
      &           nSx =   1,
@@ -9805,7 +9805,7 @@ C     Nr  :: No. points in Z for full process domain.
       INTEGER Nr
       PARAMETER (
      &           sNx =  15,
-     &           sNy =  15,
+     &           sNy =  25,
      &           OLx =   3,
      &           OLy =   3,
      &           nSx =   1,
